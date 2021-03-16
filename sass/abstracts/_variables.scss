@@ -1,0 +1,33 @@
+// Colors
+$colors: ("primary-color": #c3073f,
+    "secondary-color": #950740,
+    "tertiary-color" : #6F2232,
+    "black-color": #1A1a1D,
+    "light-grey-color": #4E4E50,
+    "white-color": #fff,
+);
+
+// Font-weights
+$font-weights: ("font-weight-thin": 100,
+    "font-weight-light": 300,
+    "font-weight-regular": 400,
+    "font-weight-medium": 500,
+    "font-weight-bold": 700,
+    "font-weight-black": 900,
+);
+
+// Font-sizes
+$font-sizes: ("font-size-small": calc(1.3rem + 0.2vw),
+    "font-size-regular": calc(1.5rem + 1vw),
+    "font-size-medium": calc(1.5rem + 2vw),
+    "font-size-large": calc(1.5rem + 5vw),
+    "font-size-xlarge": calc(2.5rem + 5vw),
+);
+
+// Break points
+$break-points: ("break-point-small-xs": 25em, // 400px
+    "break-point-small": 37.5em, // 600px
+    "break-point-medium": 56.25em, // 900px
+    "break-point-large": 75em, // 1200px
+    "break-point-large-x": 112.5em, // 1800px
+)

@@ -1,0 +1,20 @@
+.header {
+    grid-column: container-start / container-end;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    left: 0;
+    height: 8rem;
+    font-size: font-size(font-size-small);
+    padding: 0 5.5vw;
+    z-index: 100;
+    font-family: Custom;
+
+    &__logo {
+        position: relative;
+        flex-grow: 1;
+        color: color(white-color);
+    }
+}

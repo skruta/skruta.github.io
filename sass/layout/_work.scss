@@ -1,0 +1,9 @@
+.work {
+    grid-column: container-start / container-end;
+    overflow: hidden;
+
+    &__content {
+        flex-direction: column;
+        align-items: center;
+    }
+}

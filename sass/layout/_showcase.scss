@@ -1,0 +1,57 @@
+.showcase {
+    grid-column: container-start / container-end;
+    background: url('../../img/showcase-background.jpeg') no-repeat top center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: -9rem;
+    position: relative;
+
+    /* Media queries for mobile responsivnes */
+    @include media-medium {
+        background: url(../../img/showcase-background-1000.png) no-repeat top center/cover;
+    }
+
+    @include media-small {
+        background: url(../../img/showcase-background-500.png) no-repeat top center/cover;
+    }
+
+    @media (min-resolution: 192dpi) {
+        background: url(../../img/showcase-background-1000.png) no-repeat top center/cover;
+    }
+
+    /* End of media queries responsivnes */
+
+    &__content {
+        text-align: center;
+        margin-bottom: 25vh;
+
+        h1 {
+            position: relative;
+            z-index: 50;
+        }
+    }
+
+    i {
+        color: color(tertiary-color);
+        font-size: font-size(font-size-xlarge);
+    }
+
+    &__icon--html {
+        position: absolute;
+        top: 20%;
+        left: 10%;
+    }
+
+    &__icon--css {
+        position: absolute;
+        bottom: 20%;
+        left: 20%;
+    }
+
+    &__icon--javascript {
+        position: absolute;
+        top: 45%;
+        right: 15%;
+    }
+}

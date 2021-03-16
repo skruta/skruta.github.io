@@ -1,0 +1,144 @@
+.navigation__list {
+    display: flex;
+
+    @include media-medium {
+        display: none;
+    }
+
+    li:not(:last-child) {
+        margin-right: calc(1rem + 0.5vw);
+    }
+
+    &--link {
+
+        a:link,
+        a:active,
+        a:visited {
+            display: block;
+            padding: 0.4vh 0.5vw;
+            text-transform: uppercase;
+            letter-spacing: 0;
+            position: relative;
+            color: color(secondary-color);
+        }
+
+        a::after,
+        a::before {
+            border: 1px solid rgba(#fff, 0);
+            bottom: 0px;
+            content: " ";
+            display: block;
+            margin: 0 auto;
+            transition: all 450ms ease-in-out;
+            width: 0;
+        }
+
+        a:hover::after,
+        a:hover::before {
+            border-color: color(white-color);
+            width: 100%;
+        }
+    }
+}
+
+// Nav for mobiles
+.header__nav--mobile {
+    height: 4.5rem;
+    width: 4.5rem;
+    background-color: color(white-color);
+    border-radius: 50%;
+    position: relative;
+    cursor: pointer;
+    transition: background-color .3s ease-in-out;
+    display: none;
+
+    @include media-medium {
+        display: block;
+    }
+
+    &:hover {
+        background-color: color(secondary-color);
+    }
+
+    .header__nav--hamburger,
+    .header__nav--hamburger::before,
+    .header__nav--hamburger::after {
+        content: '';
+        position: absolute;
+        height: .3rem;
+        top: 0;
+        left: 0;
+        bottom: 0;
+        right: 0;
+        margin: auto;
+        width: 70%;
+        background-color: color(black-color);
+    }
+
+    .header__nav--hamburger::before {
+        top: -2rem;
+    }
+
+    .header__nav--hamburger::after {
+        bottom: -2rem;
+    }
+}
+
+// When menu is scrolled
+.nav-scrolled {
+    .header__logo {
+        color: color(black-color);
+    }
+
+    .navigation__list {
+        .navigation__list--link {
+
+            a:hover::after,
+            a:hover::before {
+                border-color: color(black-color);
+            }
+        }
+    }
+
+    .header__nav--mobile {
+        background-color: color(black-color);
+
+        &:hover {
+            background-color: color(secondary-color);
+        }
+    }
+
+    .header__nav--hamburger,
+    .header__nav--hamburger::before,
+    .header__nav--hamburger::after {
+        background-color: color(white-color);
+    }
+}
+
+// When mobile menu is clicked
+.open {
+    .header__nav--hamburger {
+        transform: rotate(-130deg);
+        width: 50%;
+    }
+
+    .header__nav--hamburger::before {
+        width: 0%;
+    }
+
+    .header__nav--hamburger::after {
+        bottom: 0;
+        transform: rotate(80deg);
+        width: 100%;
+    }
+}
+
+.open+.header__nav--overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: aqua;
+    z-index: -1;
+}

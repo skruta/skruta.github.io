@@ -1,0 +1,34 @@
+/* Responsive mixin */
+// Mobile
+@mixin media-small-xs {
+    @media screen and (max-width: break-point(break-point-small-xs)) {
+        @content;
+    }
+}
+
+// Tablets
+@mixin media-small {
+    @media screen and (max-width: break-point(break-point-small)) {
+        @content;
+    }
+}
+
+@mixin media-medium {
+    @media screen and (max-width: break-point(break-point-medium)) {
+        @content;
+    }
+}
+
+// Desktop
+@mixin media-large {
+    @media screen and (max-width: break-point(break-point-large)) {
+        @content;
+    }
+}
+
+// Desktop large
+@mixin media-large-x {
+    @media screen and (min-width: break-point($break-point-large-x)) {
+        @content;
+    }
+}

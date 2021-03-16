@@ -1,0 +1,24 @@
+// Font-weight function
+@function font-weight($font-weight-style) {
+    @return map-get($font-weights, $font-weight-style);
+}
+
+// Font-size function
+@function font-size($font-size-style) {
+    @return map-get($font-sizes, $font-size-style);
+}
+
+// Break-point function
+@function break-point($break-point-limit) {
+    @return map-get($break-points, $break-point-limit);
+}
+
+// Color function
+@function color($chosen-color) {
+    @return map-get($colors, $chosen-color);
+}
+
+// Breakpoints function
+@function break-point($break-point-width) {
+    @return map-get($break-points, $break-point-width);
+}

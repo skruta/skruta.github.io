@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="cs">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="index, follow">
+    <meta name="description"
+        content="Oficiální portfólio Štěpán Kruťi, font-end developera, který cestou self-learningu tvoří weby. Tvoření webů je nejen můj koníček, ale přímo závislost.">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/glide.core.min.css">
+    <link rel="stylesheet" href="css/glide.theme.min.css">
+    <title>Štěpán Kruťa | Frontend developer</title>
+</head>
+
+<body class="grid-container" id="home">
+    <!--*** Header Section ***-->
+    <header class="header">
+        <!-- Header Logo -->
+        <div class="header__logo">
+            SK.development
+        </div>
+        <!-- Navigation -->
+        <div class="header__nav">
+            <nav class="navigation">
+                <ul class="navigation__list">
+                    <li class="navigation__list--link"><a href="#home">Home</a></li>
+                    <li class="navigation__list--link"><a href="#about">About</a></li>
+                    <li class="navigation__list--link"><a href="#mywork">My Work</a></li>
+                    <li class="navigation__list--link"><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- Navigation for mobiles, tablets -->
+        <div class="header__nav--mobile">
+            <div class="header__nav--hamburger"></div>
+        </div>
+        <div class="header__nav--overlay"></div>
+    </header>
+
+    <!--*** Showcase ***-->
+    <section class="showcase">
+        <div class="showcase__content">
+            <h1 class="heading-primary rellax" data-rellax-speed="3" data-rellax-xs-speed="-3"
+                data-rellax-tablet-speed="-6">
+                WEB DEVELOPMENT
+            </h1>
+
+            <div class="showcase__icon--html rellax" data-rellax-speed="-5" data-rellax-xs-speed="0"
+                data-rellax-tablet-speed="-1"><i class="fab fa-html5 fa-9x"></i>
+            </div>
+            <div class="showcase__icon--css rellax" data-rellax-speed="-1" data-rellax-xs-speed="0"
+                data-rellax-tablet-speed="-1"><i class="fab fa-css3-alt fa-9x"></i></div>
+            <div class="showcase__icon--javascript rellax" data-rellax-speed="4" data-rellax-xs-speed="-0"
+                data-rellax-tablet-speed="-1"><i class="fab fa-js-square fa-9x"></i>
+            </div>
+        </div>
+    </section>
+
+    <!--*** About me ***-->
+    <section class="about section-padding" id="about">
+        <div class="about__content flex-center">
+            <!-- First part -->
+            <div class="about__content-first-part flex-center">
+                <div class="about__content-first-part__heading">
+                    <h2 class="heading-secondary heading-margin">
+                        About Me
+                    </h2>
+                </div>
+                <div class="about__content-first-part__image">
+                    <img src="./img/about-me-photo.jpg" alt="My photo">
+                </div>
+                <div class="about__content-first-part__paragraph">
+                    <p class="section-text">Hi! My name is Štěpán and I am 21 years old frontend developer, who took his
+                        path in self-learning. Web development has become an addiction for me. I am currently looking
+                        for
+                        job or projects to gain more experience. In the future, I would like to start developing backend
+                        side of websites.</p>
+                </div>
+            </div>
+            <!-- Second part -->
+            <div class="about__content-second-part flex-center">
+                <div class="about__content-second-part__heading">
+                    <h3 class="heading-terciary heading-margin">I am also interested in</h3>
+                </div>
+                <div class="about__content-second-part__hobbies__content">
+                    <div class="card">
+                        <i class="fas fa-futbol fa-4x"></i>
+                        <h4 class="heading-quarternary">Sport</h4>
+                        <p class="section-text">
+                            I love running, because while I'm running my head is able to quit this world and forget all
+                            my worries. I'm also playing football for <span class="highlight">TJ JAWA DIVIŠOV</span>.
+                            These are my main sport
+                            activities, but I like to do every sport.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-desktop fa-4x"></i>
+                        <h4 class="heading-quarternary">HW</h4>
+                        <p class="section-text">
+                            When it comes time for a new PC, I'd rather build it on my own, than buy it built. I wonder
+                            what is the best components comparred to the price. This hobby has a lot to do with <span
+                                class="highlight">Gaming</span>,
+                            because you need the best components.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <i class="fas fa-gamepad fa-4x"></i>
+                        <h4 class="heading-quarternary">Gaming</h4>
+                        <p class="section-text">
+                            I'm former pro eSport player for <span class="highlight">FC VIKTORIA PLZEŇ</span> in the
+                            game called <span class="highlight">FIFA</span> - football
+                            simulator. I played the highest league on Czech scene. After retierment I still play games,
+                            but not as much as I did.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-bottom"></div>
+
+    <!--*** My work ***-->
+    <section class="work section-padding" id="mywork">
+        <div class="work__content flex-center">
+            <h2 class="heading-secondary heading-margin">
+                My Work
+            </h2>
+            <div class="glide">
+                <div class="glide__track" data-glide-el="track">
+                    <ul class="glide__slides">
+                        <li class="glide__slide">1</li>
+                        <li class="glide__slide">2</li>
+                        <li class="glide__slide">3</li>
+                    </ul>
+                </div>
+                <div class="glide__arrows" data-glide-el="controls">
+                    <button class="glide__arrow glide__arrow--left" data-glide-dir="<">prev</button>
+                    <button class="glide__arrow glide__arrow--right" data-glide-dir=">">next</button>
+                </div>
+                <div class="glide__bullets" data-glide-el="controls[nav]">
+                    <button class="glide__bullet" data-glide-dir="=0"></button>
+                    <button class="glide__bullet" data-glide-dir="=1"></button>
+                    <button class="glide__bullet" data-glide-dir="=2"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="border-bottom"></div>
+
+    <!--*** Contact ***-->
+    <section class="contact section-padding" id="contact">
+        <div class="contact__content flex-center">
+            <h2 class="heading-secondary heading-margin">
+                Contact
+            </h2>
+            <h3 class="heading-terciary heading-margin">Do I impress you?</h3>
+            <p class="section-text">If you like my work and have interesting offer for me, just send me DM or contact me
+                through socials listed below.</p>
+            <div class="contact__content--socials">
+                <a href="https://www.facebook.com/stepan.kruta/" target="_blank"><i
+                        class="fab fa-facebook fa-6x"></i></a>
+                <a href="https://www.linkedin.com/in/štěpán-kruťa-448451208" target="_blank"><i
+                        class="fab fa-linkedin fa-6x"></i></a>
+                <a href="mailto:stepan.kruta13@gmail.com" target="_blank"><i class="fas fa-envelope fa-6x"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!--*** Footer ***-->
+    <footer class="footer section-padding">
+        <div class="footer__content flex-center">
+            <p class="section-text">
+                &copy; 2021 STEPAN KRUTA, made in Czech Republic
+            </p>
+            <p class="section-text">
+                This site was built by VS Code, Rellax.js, Glide.js, Figma.
+            </p>
+        </div>
+    </footer>
+
+    <!--*** Scripts ***-->
+    <!-- Parallax -->
+    <script src="/js/rellax.min.js"></script>
+    <script>
+        let rellax = new Rellax('.rellax', {
+            breakpoints: [600, 900]
+        })
+    </script>
+    <!-- Font awesome -->
+    <script src="https://kit.fontawesome.com/255a86fa7d.js" crossorigin="anonymous"></script>
+    <!-- Scroll -->
+    <script src="/js/scroll.js"></script>
+    <!-- Mobile menu click event -->
+    <script src="/js/mobile-menu.js"></script>
+    <!-- Glide -->
+    <script src="/js/glide.min.js"></script>
+    <script>
+        const config = {
+            type: 'carousel',
+            focusAt: 'center',
+            perView: 1
+        }
+        new Glide('.glide', config).mount()
+    </script>
+</body>
+
+</html>
