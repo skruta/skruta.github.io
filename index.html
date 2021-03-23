@@ -8,12 +8,17 @@
     <meta name="robots" content="index, follow">
     <meta name="description"
         content="Oficiální portfólio Štěpán Kruťi, font-end developera, který cestou self-learningu tvoří weby. Tvoření webů je nejen můj koníček, ale přímo závislost.">
+    <!-- Main style -->
     <link rel="stylesheet" href="css/style.css">
+    <!-- Google fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap"
         rel="stylesheet">
+    <!-- Glider -->
     <link rel="stylesheet" href="css/glide.core.min.css">
     <link rel="stylesheet" href="css/glide.theme.min.css">
+    <!-- Favicon -->
+    <link rel="shortcut icon" type="image/png" href="/img/favicon.png" />
     <title>Štěpán Kruťa | Frontend developer</title>
 </head>
 
@@ -28,29 +33,29 @@
         <div class="header__nav">
             <nav class="navigation">
                 <ul class="navigation__list">
-                    <li class="navigation__list--link"><a href="#home">Home</a></li>
-                    <li class="navigation__list--link"><a href="#about">About</a></li>
-                    <li class="navigation__list--link"><a href="#mywork">My Work</a></li>
-                    <li class="navigation__list--link"><a href="#contact">Contact</a></li>
+                    <li class="navigation__link"><a href="#home">Home</a></li>
+                    <li class="navigation__link"><a href="#about">About</a></li>
+                    <li class="navigation__link"><a href="#mywork">My Work</a></li>
+                    <li class="navigation__link"><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </div>
         <!-- Navigation for mobiles, tablets -->
-        <div class="header__nav--mobile">
-            <div class="header__nav--hamburger"></div>
+        <div class="nav-mobile">
+            <div class="nav-mobile__burger-lines"></div>
         </div>
-        <div class="header__nav--overlay"></div>
+        <div class="header__overlay"></div>
     </header>
 
     <!--*** Showcase ***-->
     <section class="showcase">
         <div class="showcase__content">
             <h1 class="heading-primary rellax" data-rellax-speed="3" data-rellax-xs-speed="-3"
-                data-rellax-tablet-speed="-6">
+                data-rellax-tablet-speed="-3">
                 WEB DEVELOPMENT
             </h1>
 
-            <div class="showcase__icon--html rellax" data-rellax-speed="-5" data-rellax-xs-speed="0"
+            <div class="showcase__icon--html rellax" data-rellax-speed="-4" data-rellax-xs-speed="0"
                 data-rellax-tablet-speed="-1"><i class="fab fa-html5 fa-9x"></i>
             </div>
             <div class="showcase__icon--css rellax" data-rellax-speed="-1" data-rellax-xs-speed="0"
@@ -65,16 +70,16 @@
     <section class="about section-padding" id="about">
         <div class="about__content flex-center">
             <!-- First part -->
-            <div class="about__content-first-part flex-center">
-                <div class="about__content-first-part__heading">
+            <div class="first-part flex-center">
+                <div class="first-part__heading">
                     <h2 class="heading-secondary heading-margin">
                         About Me
                     </h2>
                 </div>
-                <div class="about__content-first-part__image">
+                <div class="first-part__image">
                     <img src="./img/about-me-photo.jpg" alt="My photo">
                 </div>
-                <div class="about__content-first-part__paragraph">
+                <div class="first-part__paragraph">
                     <p class="section-text">Hi! My name is Štěpán and I am 21 years old frontend developer, who took his
                         path in self-learning. Web development has become an addiction for me. I am currently looking
                         for
@@ -83,11 +88,11 @@
                 </div>
             </div>
             <!-- Second part -->
-            <div class="about__content-second-part flex-center">
-                <div class="about__content-second-part__heading">
+            <div class="second-part flex-center">
+                <div class="second-part__heading">
                     <h3 class="heading-terciary heading-margin">I am also interested in</h3>
                 </div>
-                <div class="about__content-second-part__hobbies__content">
+                <div class="second-part__hobbies">
                     <div class="card">
                         <i class="fas fa-futbol fa-4x"></i>
                         <h4 class="heading-quarternary">Sport</h4>
@@ -134,9 +139,9 @@
             <div class="glide">
                 <div class="glide__track" data-glide-el="track">
                     <ul class="glide__slides">
-                        <li class="glide__slide">1</li>
-                        <li class="glide__slide">2</li>
-                        <li class="glide__slide">3</li>
+                        <li class="glide__slide"><img src="/img/glider_image_1.png" alt=""></li>
+                        <li class="glide__slide"><img src="/img/glider_image_2.png" alt=""></li>
+                        <li class="glide__slide"><img src="/img/glider_image_3.png" alt=""></li>
                     </ul>
                 </div>
                 <div class="glide__arrows" data-glide-el="controls">
@@ -204,8 +209,15 @@
     <script>
         const config = {
             type: 'carousel',
+            startAt: 1,
             focusAt: 'center',
-            perView: 1
+            perView: 2,
+            gap: 40,
+            breakpoints: {
+                900: {
+                    perView: 1
+                },
+            }
         }
         new Glide('.glide', config).mount()
     </script>
