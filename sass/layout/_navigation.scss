@@ -1,6 +1,4 @@
 .navigation {
-
-
     &__list {
         display: flex;
 
@@ -13,7 +11,7 @@
         }
     }
 
-    &__link {
+    &__item {
 
         a:link,
         a:active,
@@ -45,8 +43,8 @@
     }
 }
 
-// Nav for mobiles
-.mav-mobile {
+// Burger
+.nav-burger {
     height: 4.5rem;
     width: 4.5rem;
     background-color: color(white-color);
@@ -55,6 +53,7 @@
     cursor: pointer;
     transition: background-color .3s ease-in-out;
     display: none;
+    z-index: 10000;
 
     @include media-medium {
         display: block;
@@ -64,9 +63,9 @@
         background-color: color(secondary-color);
     }
 
-    .nav-mobile__burger-lines,
-    .nav-mobile__burger-lines::before,
-    .nav-mobile__burger-lines::after {
+    .nav-burger__lines,
+    .nav-burger__lines::before,
+    .nav-burger__lines::after {
         content: '';
         position: absolute;
         height: .3rem;
@@ -77,16 +76,70 @@
         margin: auto;
         width: 70%;
         background-color: color(black-color);
+        transition: all 350ms ease-in;
     }
 
-    .nav-mobile__burger-lines::before {
+    .nav-burger__lines::before {
         top: -2rem;
     }
 
-    .nav-mobile__burger-lines::after {
+    .nav-burger__lines::after {
         bottom: -2rem;
     }
 }
+
+// Nav for mobiles
+.nav-mobile {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateX(-50%);
+
+    &__list {
+        text-align: center;
+        font-size: font-size(font-size-xlarge);
+        padding-bottom: 10rem;
+    }
+
+    &__item {
+        padding: 1rem;
+
+        &:not(:last-child) {
+            border-bottom: 2px solid #fff;
+        }
+
+        a:link,
+        a:active,
+        a:visited {
+            display: block;
+            text-transform: uppercase;
+            color: color(primary-color);
+        }
+    }
+}
+
+// Mobile overlay
+.nav-mobile__overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: color(black-color);
+    z-index: -1;
+    opacity: 0;
+    transition: all 350ms ease-in;
+    visibility: hidden;
+}
+
 
 // When menu is scrolled
 .nav-scrolled {
@@ -94,7 +147,7 @@
         color: color(black-color);
     }
 
-    .navigation__link {
+    .navigation__item {
 
         a:hover::after,
         a:hover::before {
@@ -102,7 +155,7 @@
         }
     }
 
-    .nav-mobile {
+    .nav-burger {
         background-color: color(black-color);
 
         &:hover {
@@ -110,37 +163,42 @@
         }
     }
 
-    .nav-mobile__burger-lines,
-    .nav-mobile__burger-lines::before,
-    .nav-mobile__burger-lines::after {
+    .nav-burger__lines,
+    .nav-burger__lines::before,
+    .nav-burger__lines::after {
         background-color: color(white-color);
     }
 }
 
 // When mobile menu is clicked
 .open {
-    .nav-mobile__burger-lines {
+
+    .nav-burger__lines {
         transform: rotate(-130deg);
         width: 50%;
     }
 
-    .nav-mobile__burger-lines::before {
+    .nav-burger__lines::before {
         width: 0%;
+        opacity: 0;
     }
 
-    .nav-mobile__burger-lines::after {
+    .nav-burger__lines::after {
         bottom: 0;
         transform: rotate(80deg);
         width: 100%;
     }
 }
 
-.open+.header__overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    height: 100vh;
-    width: 100vw;
-    background-color: aqua;
-    z-index: -1;
+.open~.nav-mobile__overlay {
+    opacity: 1;
+    transition: all 350ms ease-in;
+    visibility: visible;
+}
+
+.open~.nav-mobile {
+    visibility: visible;
+    opacity: 1;
+    transform: translateX(0);
+    transition: all 300ms ease-in 150ms;
 }
